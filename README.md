@@ -49,8 +49,27 @@ In this project, we'll use adeep learning model, to create a binary classificati
 # Alphabet Soup Funding Analysis
 ## Purpose
 (images)
+
 (explain analysis)
+
 (answer 6 questions in the results section)
+### Data Preprocessing
+- What variable(s) are the target(s) for your model?
+    - The target for each model was the IS_SUCCESSFUL column. The ultimate goal is to predict which applicants will be successful, so we will utilize all other features to ultimately make a predict
+- What variable(s) are the features for your model?
+    - The available features for my model are: EIN, NAME, APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, and ASK_AMT	
+- What variable(s) should be removed from the input data because they are neither targets nor features?
+    - In the first model I ran I removed the EIN column and the NAME columns as instructed. In the first attempt at optimization, I added the NAME column back in case there was any bias to any specific organizations, as there where many that where listed multiple times.
+#### Compiling, Training, and Evaluating the Model
+- How many neurons, layers, and activation functions did you select for your neural network model, and why?
+- In the first model, 
+- Were you able to achieve the target model performance?
+ 	- I was unsuccessful in achieving a target model performance of 75% or higher in all attempts, including my initial model and 3 different optimizations.
+- What steps did you take in your attempts to increase model performance?
+	- In my first optimization I added a third hidden layer, and utilized LeakyRelu algorithm instead of Relu which I used in the first attempt.
+
 (summarize overall results of the model)
+
 (describe how I could use a different model to solve the same problem, and explain why I would use that model)
+
 
