@@ -26,17 +26,24 @@ Overall, the best performing model was model 4 though it still had a high loss p
 #### Compiling, Training, and Evaluating the Model
 - How many neurons, layers, and activation functions did you select for your neural network model, and why?
     - In the first model, I used 2 hidden layers with 100 neurons each utilizing the ReLU activation. For the output layer the Sigmoid activation was used. I chose ReLU as I could immediately identify by looking at my data that it was non-linear, so I felt that would be the optimal activation to begin with.
+    ![Alt text](Resources/pictures/m1.JPG)
+
     - In the second model, I attempted to use the LeakyReLU activation as ReLU was unsuccessful. On of my observations from the first model is that the accuracy and loss did not change much from the first epoch to the last. It was as though it stopped learning, which I've learned LeakyReLU introduces measures to prevent dead neurons so the model can continue learning. In this first optimization I added a third hidden layer, and each of the 3 layers had 100 neurons each. Sigmoid was also used here as the output activation.
+    ![Alt text](Resources/pictures/m2.JPG)
+
     - In the third model, I chose to attempt using the Tanh activation. Tanh is also a non-linear activation so I wanted to allow an attempt. I was unsure it would be the best option, and at this point I am experimenting with different activations to try and increase model accuracy.I did 3 hidden layers with 50 neurons each. I chose 50 because the prior model ran into an overfitting issue.
-    - In my fourth and final model, I chose auto-optimization to get the best model and hyperparameters to obtain accuracy higher than 75%. auton-optimaization chose. This model has 3 layers, with the first layer having 5 neurons and the remaining layers having 7, 9, 7, 3, and 9 neurons respectively. The activation function used throughout this model is sigmoid. 
+    ![Alt text](Resources/pictures/m3.JPG)
+
+    - In my fourth and final model, I chose auto-optimization to get the best model and hyperparameters to obtain accuracy higher than 75%. auton-optimaization chose. This model has 3 layers, with the first layer having 5 neurons and the remaining layers having 7, 9, 7, 3, and 9 neurons respectively. The activation function used throughout this model is sigmoid.
+    ![Alt text](Resources/pictures/m4.JPG)
 
 - Were you able to achieve the target model performance?
- 	- I was unsuccessful in achieving a target model performance of 75% or higher in all attempts, including my initial model and 3 different optimizations.
+ 	- I was successful in my 3rd optimizatio in achieving a target model performance of 75% or higher in all attempts, including my initial model and 3 different optimizations.
 - What steps did you take in your attempts to increase model performance?
 	- In my first optimization I added a third hidden layer, and utilized LeakyRelu algorithm instead of Relu which I used in the first attempt.
 
 ### Alternative Solutions
-I think a random forest could work well for this problem because it is a type of machine learning that excels at grouping, and could likely help predict funding for organizations. Also random forests work by combining many decision trees together, which can help to prevent overfitting which was an issue I encountered.
+I believe a random forest could work well for this problem because it is a type of machine learning that excels at grouping, and could likely help predict funding for organizations. Also random forests work by combining many decision trees together, which can help to prevent overfitting which was an issue I encountered.
 
 # Technical Skills
 
@@ -47,24 +54,26 @@ I think a random forest could work well for this problem because it is a type of
 - Pandas
 - Python
 - Statistical analysis
-- Big data technologies
 
 # Project Parameters
 ### Preprocess the Data
 - Create a dataframe containing the charity_data.csv data, and identify the target and feature variables in the dataset
 - Drop the EIN and NAME columns
+![Alt text](Resources/pictures/m1.2.JPG)
 - Determine the number of unique values in each column
 - For columns with more than 10 unique values, determine the number of data points for each unique value
 - Create a new value called Other that contains rare categorical variables
 - Create a feature array, X, and a target array, y by using the preprocessed data
 - Split the preprocessed data into training and testing datasets
 - Scale the data by using a StandardScaler that has been fitted to the training data 
+![Alt text](Resources/pictures/m1.3.JPG)
 ### Compile, Train and Evaluate the Model
 - Create a neural network model with a defined number of input features and nodes for each layer
 - Create hidden layers and an output layer with appropriate activation functions
 - Check the structure of the model
 - Compile and train the model
 - Evaluate the model using the test data to determine the loss and accuracy
+![Alt text](Resources/pictures/m1.4.JPG)
 - Export your results to an HDF5 file named AlphabetSoupCharity.h5
 ### Optimize the Model
 - Repeat the preprocessing steps in a new Jupyter notebook
